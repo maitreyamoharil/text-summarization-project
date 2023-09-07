@@ -1,3 +1,4 @@
+#Here are all basic and important installations of our application
 transformers 
 transformers[sentencepiece]
 datasets
@@ -18,4 +19,5 @@ ensure==1.0.2
 fastapi==0.78.0
 uvicorn==0.18.3
 Jinja2==3.1.2
--e . #It installs our setup.py file where we write logic of our code. 
+-e . 
+#It installs our setup.py file where we write logic of our code. 

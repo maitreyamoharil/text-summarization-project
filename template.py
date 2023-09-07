@@ -1,3 +1,5 @@
+#We have created a file format/template for our application
+
 import os
 from pathlib import Path # Handles Path Issues
 import logging
