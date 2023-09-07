@@ -24,4 +24,5 @@ setuptools.setup(
     },
     package_dir={"": "src"},
     packages=setuptools.find_packages(where="src")
-) # It looks for constructor file in every folder and it will install it as a local package
+) 
+# It looks for constructor file in every folder and it will install it as a local package
