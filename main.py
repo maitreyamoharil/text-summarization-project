@@ -1,3 +1,5 @@
 from textSummarizer.logging import logger
 
-logger.info("Welcome to our first log message")
+logger.info("Welcome to our first log message !")
+
+

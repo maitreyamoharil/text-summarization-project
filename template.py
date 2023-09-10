@@ -4,7 +4,11 @@ import os
 from pathlib import Path # Handles Path Issues
 import logging
 
-logging.basicConfig(level=logging.INFO, format='[%(asctime)s]: %(message)s:')
+logging.basicConfig(
+    level=logging.INFO,
+    format='[%(asctime)s]: %(message)s:',
+  # filename='logs/running_logs.log'
+    )
 
 project_name = "textSummarizer"
 
