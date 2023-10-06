@@ -1,4 +1,4 @@
-#We have created a file format/template for our application
+# We have created a file format/template for our application
 
 import os
 from pathlib import Path # Handles Path Issues
@@ -31,7 +31,8 @@ list_of_files = [
     "Dockerfile",
     "requirements.txt",
     "setup.py",
-    "research/trials.ipynb"
+    "research/trials.ipynb",
+    'practice.py',
 ]
 
 for filepath in list_of_files:
