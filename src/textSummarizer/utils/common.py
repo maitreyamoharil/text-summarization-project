@@ -3,13 +3,12 @@ import os
 from box.exceptions import BoxValueError
 import yaml
 from textSummarizer.logging import logger
-from ensure import ensure_annotations # It is used for type checking of the return type  
+from ensure import ensure_annotations  # It is used for type checking of the return type
 from box import ConfigBox # Used for easy access of key values from a dictionary like dict.key1 rather than dict[key1]
 from pathlib import Path
 from typing import Any
 
-
-@ensure_annotations # Annotations are the functions which takes other functions as an arguments and adds additinal functionalities to the existing function
+@ensure_annotations  # Annotations are the functions which takes other functions as an arguments and adds additinal functionalities to the existing function
 def read_yaml(path_to_yaml: Path) -> ConfigBox:
     """
     Read a yaml file and return
@@ -22,19 +21,19 @@ def read_yaml(path_to_yaml: Path) -> ConfigBox:
         e: empty yaml file
 
     Returns:
-        ConfigBox: ConfigBox type 
+        ConfigBox: ConfigBox type
     """
     try:
         with open(path_to_yaml) as yaml_file:
             content = yaml.safe_load(yaml_file)
-            logger.info(f"yaml file: {path_to_yaml} loaded successfully") 
+            logger.info(f"yaml file: {path_to_yaml} loaded successfully")
             return ConfigBox(content)
     except BoxValueError:
         # raise Exception("yaml file is empty")
         print("yaml file is empty")
     except Exception as e:
         print(e)
-    
+
 
 @ensure_annotations
 def create_directories(path_to_directories: list, verbose=True):
@@ -58,12 +57,13 @@ def get_size(path: Path) -> str:
 
     Args:
         path (Path): path of the file
-        
+
     Returns:
         str: size in KB
     """
-    size_in_kb = round(os.path.getsize(path)/1024)
+    size_in_kb = round(os.path.getsize(path) / 1024)
     return f"~ {size_in_kb} KB"
+
 
 
 
